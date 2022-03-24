@@ -4,7 +4,7 @@ from utlis import hash_partitioner
 from utlis import key_serializer
 from utlis import value_serializer
 from utlis import fake_data
-from secret import KafkaProducerSecret
+from secret import KafkaSecret
 """
 0:config
     - connect to server
@@ -21,7 +21,7 @@ from secret import KafkaProducerSecret
 """
 
 config = {
-    'bootstrap_servers': KafkaProducerSecret.bootstrap_servers,  # ['host1:9092','host2:9092']
+    'bootstrap_servers': KafkaSecret.bootstrap_server,  # ['host1:9092','host2:9092']
     'key_serializer': key_serializer,
     'value_serializer': value_serializer,
     'acks': 'all',
