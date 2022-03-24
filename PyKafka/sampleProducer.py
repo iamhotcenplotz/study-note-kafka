@@ -21,7 +21,7 @@ from secret import KafkaSecret
 """
 
 config = {
-    'bootstrap_servers': KafkaSecret.bootstrap_server,  # ['host1:9092','host2:9092']
+    'bootstrap_servers': KafkaSecret.bootstrap_server,  # ['host1:9092','host2:9092'] or 'host:9092'
     'key_serializer': key_serializer,
     'value_serializer': value_serializer,
     'acks': 'all',
