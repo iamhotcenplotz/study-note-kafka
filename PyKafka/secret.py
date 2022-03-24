@@ -1,2 +1,2 @@
 class KafkaProducerSecret:
-    bootstrap_servers = 'aaa'
+    bootstrap_servers = 'bbb'
