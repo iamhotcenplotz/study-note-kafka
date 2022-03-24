@@ -25,7 +25,7 @@ config = {
     'key_serializer': key_serializer,
     'value_serializer': value_serializer,
     'acks': 'all',
-    'compression_type': 'snappy',
+    'compression_type': 'snappy',  # pip install python-snappy
     'linger_ms': 5,
     'partitioner': hash_partitioner,
     'retries': 1234567891011
