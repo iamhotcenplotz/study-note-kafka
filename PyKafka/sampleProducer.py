@@ -1,10 +1,11 @@
 import time
 from kafka import KafkaProducer
-from utlis import hash_partitioner
-from utlis import key_serializer
-from utlis import value_serializer
-from utlis import fake_data
+from utils import hash_partitioner
+from utils import key_serializer
+from utils import value_serializer
+from utils import fake_data
 from secret import KafkaSecret
+
 """
 0:config
     - connect to server
