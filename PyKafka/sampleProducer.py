@@ -42,4 +42,4 @@ for _ in range(100):
 
 producer.close()
 
-print('aaa')
+
