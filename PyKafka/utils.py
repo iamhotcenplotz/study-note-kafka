@@ -35,7 +35,7 @@ def value_serializer(data):
     return json.dumps(data, indent=4).encode('utf-8')
 
 
-def fake_data():
+def fake_data() -> dict:
     id = int(time.time())
     who = random.choice(['kafka', 'mysql', 'hdfs', 'neo4j', 'clickhouse'])
     action = random.choice(['eat', 'sleep', 'beat doudou'])
