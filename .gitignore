@@ -2,3 +2,4 @@
 main.py
 venv
 secret.py
+__pycache__

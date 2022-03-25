@@ -1,6 +1,6 @@
 import time
 from kafka import KafkaProducer
-from utils import hash_partitioner
+from kafka.partitioner import DefaultPartitioner
 from utils import key_serializer
 from utils import value_serializer
 from utils import fake_data
@@ -28,19 +28,16 @@ config = {
     'acks': 'all',
     'compression_type': 'snappy',  # pip install python-snappy
     'linger_ms': 5,
-    'partitioner': hash_partitioner,
-    'retries': 1234567891011
+    'partitioner': DefaultPartitioner(),
+    'retries': 2147483647
 
 }
 
 producer = KafkaProducer(**config)
 
-for _ in range(100):
+for _ in range(5000):
     message = fake_data()
     rst = producer.send(topic='test', key=message['id'], value=message)
     print(rst.get())
-    time.sleep(3)
 
 producer.close()
-
-
