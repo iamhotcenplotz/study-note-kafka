@@ -18,6 +18,9 @@ config = {
 }
 
 # create consumer
+
+#### Option1:
+
 topics = list()
 topics.append('ods_ods_news_db_ods_news_eastmoney')
 topics.append('ods_ods_news_db_ods_news_21jingji')
@@ -26,8 +29,10 @@ topics.append('ods_ods_news_db_ods_news_egs')
 topics.append('ods_ods_news_db_ods_news_jiemian')
 consumer = KafkaConsumer(*topics, **config)
 
-# consumer.subscribe(*topics)
+#### Option2:
 
+# consumer.subscribe(*topics)
+# consumer = KafkaConsumer(**config)
 # consume data
 
 while True:
